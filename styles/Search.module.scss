@@ -1,0 +1,64 @@
+@import "./variables.scss";
+
+.search_button {
+  background-color: $primary-color;
+  width: 100%;
+  max-width: $search-button-width;
+}
+
+.domain_link {
+  margin: 0;
+  word-break: break-word;
+  text-decoration-color: rgba(13, 103, 254, 0.4);
+  font-family: "Inter", sans-serif;
+  color: $black-variant-color;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: $spacer * 4;
+  line-height: $spacer * 5;
+  padding: $spacer $spacer * 3;
+  border-right: 1px solid $black-color;
+  &:first-of-type {
+    padding-left: 0;
+  }
+  &:last-of-type {
+    border: none;
+  }
+}
+
+.domain_list_title {
+  background: rgba($domain-list-title-background-color, 0.67);
+  padding: $spacer * 2;
+}
+
+.domain_name_status {
+  padding-left: $spacer * 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.domain_status {
+  height: 100%;
+  &[data-status="available"] {
+    background-color: $domain-status-available !important;
+  }
+}
+
+.domain_price {
+  color: $gray-variant-color;
+  font-weight: 400;
+  font-size: $spacer * 4;
+  line-height: $spacer * 5;
+}
+
+.domain_purchase_button {
+  width: $spacer * 36;
+  border: 2px solid $primary-color;
+  color: $primary-color;
+  &:hover {
+    background-color: $primary-color;
+    border-color: $primary-color;
+  }
+}
