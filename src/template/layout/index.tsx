@@ -2,7 +2,6 @@ import Head from "next/head";
 import { LayoutType } from "../../core/enum/layout.type";
 
 const Layout = ({ metaInfo, children }: LayoutType) => {
-    console.log(typeof children, "<<--children")
     return(
         <>
         <Head>
