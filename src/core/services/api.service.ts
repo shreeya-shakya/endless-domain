@@ -3,7 +3,7 @@ const apiEndpoint = `${process.env.domainUrl}/${process.env.apiUrl}/${process.en
 export function getApi(url: string) {
   return fetch(apiEndpoint + url, {
     method: 'GET',
-    mode: 'no-cors',
+    // mode: 'no-cors',
   })
     .then((res) => {
       if (!res.ok) {
