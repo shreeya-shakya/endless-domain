@@ -1,0 +1,17 @@
+@import "./variables.scss";
+
+.explore_button {
+  background-color: $primary-color;
+  width: 100%;
+  max-width: $explore-button-width;
+  padding: $spacer * 3 0px;
+}
+
+.subtitle {
+  color: $gray-variant-color;
+  font-size: $spacer * 5;
+}
+
+.explore_section {
+  box-shadow: 0px 1px 4px 1px rgba($black-color, 0.15);
+}
