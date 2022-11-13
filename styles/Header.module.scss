@@ -1,0 +1,72 @@
+@import "./variables.scss";
+
+.header {
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  background-color: $white-color;
+  box-shadow: 0px 1px 4px 1px rgba($black-color, 0.15);
+  transition: 0.4s;
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav_container {
+  max-width: 1366px;
+  padding: 20px 93px;
+}
+
+.nav__logo img {
+  width: 150.96px;
+  height: 50px;
+}
+
+.nav__burger,
+.nav__close {
+  display: none;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__lists_primary,
+.nav__lists_secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__item {
+  margin-left: 35px;
+  list-style: none;
+}
+
+.nav__link {
+  color: $gray-variant-color;
+  //    font-family: var(--font-secondary);
+  position: relative;
+}
+
+.nav__link_btn {
+  color: $white-color;
+  background: $primary-color;
+  border-color: $primary-color;
+  font-size: $spacer * 4;
+  padding: $spacer * 2 $spacer * 15;
+  border-radius: 8px;
+  position: relative;
+}
+
+.nav__link_btn:hover,
+.nav__link_btn:focus {
+  background: $primary-dark-color;
+  transition: 0.4s;
+}

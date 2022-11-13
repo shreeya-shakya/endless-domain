@@ -1,5 +1,9 @@
 @import "./variables.scss";
 
+a {
+  text-decoration: none !important;
+}
+
 .spinner {
   animation: spin infinite 2s linear;
 
