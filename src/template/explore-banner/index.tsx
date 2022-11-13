@@ -5,7 +5,7 @@ import titleStyles from "styles/Title.module.scss";
 const ExploreBanner = () => {
   return (
     <>
-      <div className={`${styles.explore_section}`}>
+      <section className={`box_shadow_black`}>
         <div className={`container py-4`}>
           <Row>
             <Col lg={8}>
@@ -30,7 +30,7 @@ const ExploreBanner = () => {
             </Col>
           </Row>
         </div>
-      </div>
+      </section>
     </>
   );
 };
