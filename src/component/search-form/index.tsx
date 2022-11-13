@@ -16,8 +16,8 @@ const SearchForm = ({ search }: { search: (keyword: string) => void }) => {
   ];
 
   const searchDomain = ($event: FormEvent) => {
-    const EVENT_TARGET = $event.target as any;
     $event.preventDefault();
+    const EVENT_TARGET = $event.target as any;
     search(EVENT_TARGET.searchText.value);
   };
 

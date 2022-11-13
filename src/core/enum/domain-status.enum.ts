@@ -1,3 +1,4 @@
 export enum DOMAIN_STATUS {
-    available = 'AVAILABLE'
+    available = 'AVAILABLE',
+    unavailable = 'UNAVAILABLE'
 }

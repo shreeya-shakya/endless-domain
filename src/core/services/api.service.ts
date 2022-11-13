@@ -19,7 +19,12 @@ export function getApi(url: string) {
       console.log(errMessage);
       if (errors.status) {
         const error = await errors.text();
-        console.log(error);
+        if (JSON.parse(error).errors instanceof Array) {
+          const errorInvalid = JSON.parse(error).errors.filter((e: any) => e.code === 'DOMAIN_NAME_INVALID')[0];
+          throw errorInvalid;
+        } else if (typeof JSON.parse(error).errors === 'string') {
+
+        }
         throw error;
       }
       throw errMessage.message;

@@ -41,8 +41,11 @@
 
 .domain_status {
   height: 100%;
-  &[data-status="available"] {
+  &[data-status=AVAILABLE] {
     background-color: $domain-status-available !important;
+  }
+  &[data-status=UNAVAILABLE] {
+    background-color: $domain-status-unavailable !important;
   }
 }
 
