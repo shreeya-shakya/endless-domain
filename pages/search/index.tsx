@@ -59,10 +59,11 @@ const Search = () => {
 
   const getDomainSuggestion = async (keyword: string) => {
     try {
+      console.log(domainAvailability)
       let response: Array<DomainListItem> = await apiService.getApi(
         `${CHECK_AVAILABILITY_URL}${SUGGESTION_URL}?search=${
           keyword.indexOf(".") >= 0 ? `${keyword.split(".")[0]}` : keyword
-        }${keyword.indexOf(".") >= 0 ? `&tlds=${keyword.split(".")[1]}` : ""}`
+        }${keyword.indexOf(".") >= 0 && domainAvailability?.status === DOMAIN_STATUS.available? `&tlds=${keyword.split(".")[1]}` : ""}&page=1&rowsPerPage=10`
       );
       response = response.map((domain) => ({
         ...domain,
@@ -70,7 +71,9 @@ const Search = () => {
       }));
       setSuggestionList(response);
       setSpinner(false);
-    } catch (error: any) {}
+    } catch (error: any) {
+      setSpinner(false);
+    }
   };
 
   return (

@@ -10,21 +10,23 @@ const SearchListItem = ({ name, price, status }: DomainListItem) => {
         <Col xs="8">
           <div className={`${styles.domain_name_status}`}>
             <p className="mb-0 me-2">{name}</p>
-            <Badge
-              className={`${styles.domain_status}`}
-              data-status={status}
-            >
+            <Badge className={`${styles.domain_status}`} data-status={status}>
               {status}
             </Badge>
           </div>
         </Col>
         <Col xs="2">
-          {
-            price &&<p className={`${styles.domain_price} mb-0`}>${price}</p>
-          }
+          {price && <p className={`${styles.domain_price} mb-0`}>${price}</p>}
         </Col>
         <Col xs="2">
-          <Button outline className={`${styles.domain_purchase_button}`} disabled={status===DOMAIN_STATUS.unavailable}>
+          <Button
+            outline
+            className={`${styles.domain_purchase_button}`}
+            disabled={status === DOMAIN_STATUS.unavailable}
+            href={`https://ud-sandbox.com/search?ref=${process.env.resellerID}&searchTerm=${name}`}
+            tag="a"
+            target="_blank"
+          >
             Buy
           </Button>
         </Col>
