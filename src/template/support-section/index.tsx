@@ -5,7 +5,7 @@ import styles from "styles/Support.module.scss";
 const SupportSection = () => {
   return (
     <>
-      <section className="box_shadow_black">
+      <section>
         <div className={`container py-4`}>
           <h1 className={`text-center ${titleStyles.title} pb-2`}>
             Support Service

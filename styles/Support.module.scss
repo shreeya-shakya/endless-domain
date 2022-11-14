@@ -1,7 +1,7 @@
 @import "./variables.scss";
 
 .support__box{
-    padding: 20px;
+    padding: $spacer * 5;
     box-shadow: 2px 4px 15px rgba(10, 121, 181, 0.24);
     border-radius: 10px;
 }
@@ -13,12 +13,11 @@
 }
 
 .support__box_sub_header{
-    font-size: 16px;
+    font-size: $spacer * 4;
     font-weight: 400;
-    line-height: 30px;
+    line-height: $spacer * 8;
     color: $gray-variant-color;
-    /* width: 255px; */
-    padding: 16px 0;
+    padding: $spacer * 4 0;
 }
 
 .support__box_header,

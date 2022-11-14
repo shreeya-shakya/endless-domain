@@ -1,0 +1,34 @@
+@import "./variables.scss";
+
+.footer_bg {
+  background: linear-gradient(
+    135deg,
+    $footer-background-dark-color 0%,
+    $footer-background-light-color 100%
+  );
+  padding: $spacer * 20 0px;
+}
+
+.footer__title__newsletter {
+  color: $white-color;
+  font-size: $spacer * 12;
+  font-weight: 700;
+  margin-bottom: $spacer * 5;
+}
+
+.footer__subtitle__newsletter {
+  color: $white-variant-color;
+  line-height: $spacer * 6;
+}
+
+.subscribe_button {
+  width: $spacer * 45;
+  border: 2px solid $white-variant-color;
+  color: $white-color;
+  margin-top: $spacer * 7;
+  &:hover {
+    background-color: $white-color;
+    border-color: $white-color;
+    color: $footer-background-light-color;
+  }
+}
