@@ -32,3 +32,13 @@
     color: $footer-background-light-color;
   }
 }
+
+.footer__copyright{
+  color: $white-color;
+}
+.social_media{
+  margin: $spacer * 6 0px;
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: repeat(10, 1fr);
+}
