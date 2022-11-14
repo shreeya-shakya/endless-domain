@@ -6,7 +6,7 @@ import Image from "next/image";
 const BenefitsSection = () => {
   return (
     <>
-      <section className={`box_shadow_black`}>
+      <section className={``}>
         <div className={`container py-5`}>
           <h1 className={styles.benefit_title}>
             Benefits Of Having A{" "}
@@ -33,17 +33,18 @@ const BenefitsSection = () => {
             </Col>
             <Col lg={6}>
               <div className={styles.benefit_box}>
-                <div
-                  className={`${styles.benefit__header_info} position-relative`}
-                >
+                <div className={`${styles.benefit__header_info}`}>
                   <h3 className={styles.header__title}>Digital Identity</h3>
-                  <Image
-                    src="/icons/digital.png"
-                    alt="Benefits"
-                    className={styles.header__img}
-                    layout="fill"
-                    objectFit="cover"
-                  />
+                  <div className="position-relative">
+                    <Image
+                      src="/icons/digital.png"
+                      alt="Benefits"
+                      className={styles.header__img}
+                      objectFit="cover"
+                      height={40}
+                      width={40}
+                    />
+                  </div>
                 </div>
 
                 <div className={styles.benefit__sub_header_info}>
@@ -58,18 +59,21 @@ const BenefitsSection = () => {
 
               <div className={styles.benefit_box}>
                 <div
-                  className={`${styles.benefit__header_info} position-relative`}
+                  className={`${styles.benefit__header_info}`}
                 >
                   <h3 className={styles.header__title}>
                     Sell A Product/Service
                   </h3>
-                  <Image
-                    src="/icons/digital.png"
-                    alt="Benefits"
-                    className={styles.header__img}
-                    layout="fill"
-                    objectFit="contain"
-                  />
+                  <div className="position-relative">
+                    <Image
+                      src="/icons/sell.png"
+                      alt="Benefits"
+                      className={styles.header__img}
+                      objectFit="cover"
+                      height={40}
+                      width={40}
+                    />
+                  </div>
                 </div>
 
                 <div className={styles.benefit__sub_header_info}>
@@ -83,18 +87,21 @@ const BenefitsSection = () => {
 
               <div className={styles.benefit_box}>
                 <div
-                  className={`${styles.benefit__header_info} position-relative `}
+                  className={`${styles.benefit__header_info}`}
                 >
                   <h3 className={styles.header__title}>
                     Gateway Into The Ecosystem
                   </h3>
-                  <Image
-                    src="/icons/digital.png"
-                    alt="Benefits"
-                    className={styles.header__img}
-                    layout="fill"
-                    objectFit="contain"
-                  />
+                  <div className="position-relative">
+                    <Image
+                      src="/icons/ecosystem.png"
+                      alt="Benefits"
+                      className={styles.header__img}
+                      objectFit="cover"
+                      height={40}
+                      width={40}
+                    />
+                  </div>
                 </div>
 
                 <div className={styles.benefit__sub_header_info}>
