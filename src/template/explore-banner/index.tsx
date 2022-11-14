@@ -25,7 +25,7 @@ const ExploreBanner = () => {
                 href="/search"
                 tag="a"
               >
-                Let's Explore
+                Let&apos;s Explore
               </Button>
             </Col>
           </Row>

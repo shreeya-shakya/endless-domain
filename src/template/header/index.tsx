@@ -13,14 +13,14 @@ const Header = () => {
       <header className={`${styles.header}`} id="header">
         <div className={`container`}>
           <nav className={`${styles.nav} ${styles.nav_container}`}>
-            <a href="/" className={styles.nav__logo}>
+            <Link href="/" className={styles.nav__logo}>
               <Image
                 src="/logo.png"
                 alt="Endless Domain Logo"
                 height={50}
                 width={150}
               />
-            </a>
+            </Link>
 
             <div className={styles.nav__burger} id="nav-burger">
               {/* <i className="ri-menu-line"></i> */}
