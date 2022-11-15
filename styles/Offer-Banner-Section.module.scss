@@ -1,0 +1,54 @@
+@import "./variables.scss";
+
+.section_bg {
+  background: linear-gradient(
+    135deg,
+    $footer-background-dark-color 0%,
+    $footer-background-light-color 100%
+  );
+}
+.offer_title {
+  text-align: center;
+  color: $white-color;
+}
+
+.offer__subtitle {
+  text-align: center;
+  color: $white-color;
+  margin-bottom: $spacer * 10;
+}
+
+.offer__grid__box {
+  border: 1px solid $primary-dark-color;
+  margin-bottom: $spacer * 8;
+  transition: all .2s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.offer_list {
+  background-color: $white-color;
+  padding: $spacer * 10;
+}
+
+.offer__grid__title {
+  background: $primary-dark-color;
+  color: $white-color;
+  text-align: center;
+  font-weight: 700;
+  padding: 10px;
+}
+
+.offer__grid__content {
+  font-size: 14px;
+  color: $gray-variant-color;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.offer_middle_list_padding {
+  padding-left: $spacer * 6;
+  padding-right: $spacer * 6;
+}

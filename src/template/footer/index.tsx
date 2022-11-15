@@ -78,15 +78,17 @@ const Footer = () => {
               </p>
 
               <div>
-                <Input
-                  id="email"
-                  name="email"
-                  placeholder="Email Address"
-                  type="email"
-                />
-                <Button outline className={`${styles.subscribe_button}`}>
-                  Subscribe
-                </Button>
+                <form>
+                  <Input
+                    id="email"
+                    name="subscribeEmail"
+                    placeholder="Email Address"
+                    type="email"
+                  />
+                  <Button outline className={`${styles.subscribe_button}`} type="submit">
+                    Subscribe
+                  </Button>
+                </form>
               </div>
             </Col>
           </Row>
