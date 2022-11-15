@@ -65,7 +65,7 @@ const Header = () => {
                   </a>
                 </li>
                 <li className={styles.nav__item}>
-                  <a onClick={() => ROUTER.push("/#service")} className={styles.nav__link}>
+                  <a onClick={() => ROUTER.push("/#aboutUs")} className={styles.nav__link}>
                     Services & Vision
                   </a>
                 </li>
