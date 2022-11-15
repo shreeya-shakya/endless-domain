@@ -8,6 +8,10 @@ import * as apiService from "../../src/core/services/api.service";
 import { useState } from "react";
 import { DomainAvailability } from "../../src/core/enum/domain-availability.type";
 import { DomainListItem } from "../../src/core/enum/domain-list.type";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import styles from "styles/Search.module.scss";
 
 const Search = () => {
   const META: MetaData = {
@@ -53,11 +57,19 @@ const Search = () => {
           status: DOMAIN_STATUS.REGISTERED,
         };
       } else {
-        domainList = {
-          name: response.domain.name,
-          price: response.availability.price,
-          status: DOMAIN_STATUS.AVAILABLE,
-        };
+        if (response.availability.price) {
+          domainList = {
+            name: response.domain.name,
+            price: response.availability.price,
+            status: DOMAIN_STATUS.AVAILABLE,
+          };
+        } else {
+          domainList = {
+            name: response.domain.name,
+            price: response.availability.price,
+            status: DOMAIN_STATUS.UNRELEASED,
+          };
+        }
       }
 
       setDomainAvailability(domainList);
@@ -141,7 +153,22 @@ const Search = () => {
                 list={suggestionList}
               ></SearchList>
             )}
-
+            {!spinner && !domainAvailability && suggestionList.length <= 0 && (
+              <>
+                <div className={`text-center py-4 ${styles.no_result}`}>
+                  <FontAwesomeIcon
+                    icon={faSearch as IconProp}
+                    style={{
+                      width: "60px",
+                      cursor: "pointer",
+                      marginBottom: "24px",
+                    }}
+                  />
+                  <h1>No active search!</h1>
+                  <p>Type to start a search.</p>
+                </div>
+              </>
+            )}
             {/* <SearchList
               title="Suggested Name"
               list={[

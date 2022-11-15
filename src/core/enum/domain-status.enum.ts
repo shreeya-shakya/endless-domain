@@ -3,4 +3,5 @@ export enum DOMAIN_STATUS {
   UNAVAILABLE = "unavailable",
   PROTECTED = "protected",
   REGISTERED = "registered",
+  UNRELEASED = "unreleased"
 }

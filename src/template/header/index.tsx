@@ -60,19 +60,19 @@ const Header = () => {
 
               <ul className={`mb-0 ${styles.nav__lists_primary}`}>
                 <li className={styles.nav__item}>
-                  <Link href="#aboutus" className={styles.nav__link}>
+                  <a onClick={() => ROUTER.push("/#aboutUs")} className={styles.nav__link}>
                     About Us
-                  </Link>
+                  </a>
                 </li>
                 <li className={styles.nav__item}>
-                  <Link href="#Servise&vision" className={styles.nav__link}>
+                  <a onClick={() => ROUTER.push("/#service")} className={styles.nav__link}>
                     Services & Vision
-                  </Link>
+                  </a>
                 </li>
                 <li className={styles.nav__item}>
-                  <Link href="#support" className={styles.nav__link}>
+                  <a onClick={() => ROUTER.push("/#support")} className={styles.nav__link}>
                     Support
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>

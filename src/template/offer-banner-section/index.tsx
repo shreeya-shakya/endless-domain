@@ -78,7 +78,7 @@ const OfferBannerSection = () => {
                     Seamless Navigation
                   </h6>
                   <p className={styles.offer__grid__content}>
-                    To remove all chaos from our user's journey, we have
+                    To remove all chaos from our user&apos;s journey, we have
                     incorporated a simplified process to grab a domain name
                     within minutes.
                   </p>
