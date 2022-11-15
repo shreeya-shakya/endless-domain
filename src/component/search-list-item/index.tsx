@@ -23,7 +23,7 @@ const SearchListItem = ({ name, price, status }: DomainListItem) => {
             outline
             className={`${styles.domain_purchase_button}`}
             disabled={status !== DOMAIN_STATUS.AVAILABLE}
-            href={`https://ud-sandbox.com/search?ref=${process.env.resellerID}&searchTerm=${name}`}
+            href={`${process.env.domainUrl}/search?ref=${process.env.resellerID}&searchTerm=${name}`}
             tag="a"
             target="_blank"
           >
