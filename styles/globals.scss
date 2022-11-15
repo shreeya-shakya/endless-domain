@@ -34,5 +34,8 @@ a {
   color: $footer-success-message !important;
 }
 .invalid-feedback {
-  color: $footer-error-message;
+  color: $footer-error-message !important;
+}
+.form-control.is-invalid, .was-validated .form-control:invalid{
+  border: none !important
 }
