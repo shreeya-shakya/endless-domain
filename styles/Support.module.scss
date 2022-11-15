@@ -1,0 +1,26 @@
+@import "./variables.scss";
+
+.support__box{
+    padding: $spacer * 5;
+    box-shadow: 2px 4px 15px rgba(10, 121, 181, 0.24);
+    border-radius: 10px;
+}
+
+
+.support__box_header{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.support__box_sub_header{
+    font-size: $spacer * 4;
+    font-weight: 400;
+    line-height: $spacer * 8;
+    color: $gray-variant-color;
+    padding: $spacer * 4 0;
+}
+
+.support__box_header,
+.support__box_sub_header{
+    text-align: center;
+}

@@ -1,0 +1,22 @@
+@import "./variables.scss";
+
+.banner_col_1 .banner__title {
+  font-size: 64px;
+  font-weight: 800;
+}
+
+.banner_col_1 .banner__subtitle {
+  padding-top: 16px;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.hero_background {
+  background: #01013f url("/hero-bg.png") no-repeat 20px;
+  background-size: cover;
+}
+
+.banner_col_1 {
+  color: $white-color;
+  padding: 200px 0px;
+}

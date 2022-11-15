@@ -1,0 +1,37 @@
+@import "./variables.scss";
+
+.benefit_title {
+  color: $gray-variant-color;
+  font-weight: 400;
+}
+
+.benefit__subtitle {
+  color: $gray-variant-color;
+}
+
+.benefit_box {
+  margin-bottom: 32px;
+}
+.benefit__header_info {
+  display: flex;
+  column-gap: 10px;
+  margin-bottom: 4px;
+  align-items: baseline;
+}
+
+.header__img {
+  width: auto !important;
+  position: relative;
+}
+
+.header__title {
+  font-size: $spacer * 5;
+  font-weight: 600;
+  padding-bottom: $spacer * 2;
+}
+
+.benefit__sub_header_info {
+  font-size: $spacer * 4;
+  color: $gray-variant-color;
+  line-height: $spacer * 8;
+}
