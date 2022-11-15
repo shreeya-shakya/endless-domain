@@ -11,7 +11,7 @@ const SearchListItem = ({ name, price, status }: DomainListItem) => {
           <div className={`${styles.domain_name_status}`}>
             <p className="mb-0 me-2">{name}</p>
             <Badge className={`${styles.domain_status}`} data-status={status}>
-              {status}
+              {status?.toUpperCase()}
             </Badge>
           </div>
         </Col>
@@ -22,7 +22,7 @@ const SearchListItem = ({ name, price, status }: DomainListItem) => {
           <Button
             outline
             className={`${styles.domain_purchase_button}`}
-            disabled={status === DOMAIN_STATUS.unavailable}
+            disabled={status !== DOMAIN_STATUS.AVAILABLE}
             href={`https://ud-sandbox.com/search?ref=${process.env.resellerID}&searchTerm=${name}`}
             tag="a"
             target="_blank"

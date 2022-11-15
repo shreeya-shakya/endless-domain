@@ -39,18 +39,34 @@ const Search = () => {
       const response: DomainAvailability = await apiService.getApi(
         `${CHECK_AVAILABILITY_URL}/${keyword}`
       );
-      const domainList: DomainListItem = {
-        name: response.domain.name,
-        price: response.availability.price,
-        status: DOMAIN_STATUS.available,
-      };
+      let domainList: DomainListItem;
+      if (response.availability.protected) {
+        domainList = {
+          name: response.domain.name,
+          price: response.availability.price,
+          status: DOMAIN_STATUS.PROTECTED,
+        };
+      } else if (response.availability.registered) {
+        domainList = {
+          name: response.domain.name,
+          price: response.availability.price,
+          status: DOMAIN_STATUS.REGISTERED,
+        };
+      } else {
+        domainList = {
+          name: response.domain.name,
+          price: response.availability.price,
+          status: DOMAIN_STATUS.AVAILABLE,
+        };
+      }
+
       setDomainAvailability(domainList);
     } catch (error: any) {
       if (error.code && error.code === "DOMAIN_NAME_INVALID") {
         const domainList: DomainListItem = {
           name: error.value,
           price: null,
-          status: DOMAIN_STATUS.unavailable,
+          status: DOMAIN_STATUS.UNAVAILABLE,
         };
         setDomainAvailability(domainList);
       }
@@ -59,16 +75,25 @@ const Search = () => {
 
   const getDomainSuggestion = async (keyword: string) => {
     try {
-      console.log(domainAvailability)
       let response: Array<DomainListItem> = await apiService.getApi(
         `${CHECK_AVAILABILITY_URL}${SUGGESTION_URL}?search=${
           keyword.indexOf(".") >= 0 ? `${keyword.split(".")[0]}` : keyword
-        }${keyword.indexOf(".") >= 0 && domainAvailability?.status === DOMAIN_STATUS.available? `&tlds=${keyword.split(".")[1]}` : ""}&page=1&rowsPerPage=10`
+        }${
+          keyword.indexOf(".") >= 0 &&
+          domainAvailability?.status === DOMAIN_STATUS.AVAILABLE
+            ? `&tlds=${keyword.split(".")[1]}`
+            : ""
+        }`
       );
       response = response.map((domain) => ({
         ...domain,
-        status: DOMAIN_STATUS.available,
+        status: DOMAIN_STATUS.AVAILABLE,
       }));
+      const containsDuplicates =
+        response.filter((item) => item.name === keyword).length > 0;
+      if (containsDuplicates) {
+        response = response.filter((item) => item.name !== keyword);
+      }
       setSuggestionList(response);
       setSpinner(false);
     } catch (error: any) {
