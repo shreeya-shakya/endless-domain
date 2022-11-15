@@ -1,5 +1,3 @@
-import Head from "next/head";
-import Image from "next/image";
 import { MetaData } from "../src/core/enum/meta-data.type";
 import AboutUsSection from "../src/template/about-us-section";
 import BenefitsSection from "../src/template/benefits-section";
@@ -22,10 +20,16 @@ export default function Home() {
         <HeroSection />
         <ExploreBanner />
         <Description />
-        <OfferBannerSection />
+        <div id="service">
+          <OfferBannerSection />
+        </div>
         <BenefitsSection />
-        <SupportSection />
-        <AboutUsSection />
+        <div id="support">
+          <SupportSection />
+        </div>
+        <div id="aboutUs">
+          <AboutUsSection />
+        </div>
       </Layout>
     </>
   );
