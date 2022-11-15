@@ -41,11 +41,14 @@
 
 .domain_status {
   height: 100%;
-  &[data-status=AVAILABLE] {
+  &[data-status="available"] {
     background-color: $domain-status-available !important;
   }
-  &[data-status=UNAVAILABLE] {
+  &[data-status="unavailable"] {
     background-color: $domain-status-unavailable !important;
+  }
+  &[data-status="registered"] {
+    background-color: $domain-status-registered !important;
   }
 }
 
