@@ -12,7 +12,8 @@ const SearchForm = ({ search }: { search: (keyword: string) => void }) => {
     '.bitcoin',
     '.coin',
     '.blockchain',
-    '.com',
+    '.zil',
+    '.dao'
   ];
 
   const searchDomain = ($event: FormEvent) => {
