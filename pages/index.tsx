@@ -11,7 +11,7 @@ import SupportSection from "../src/template/support-section";
 export default function Home() {
   let meta: MetaData = {
     title: "Endless Domain",
-    description: "Rent Token page",
+    description: "A platform that introduces you to the blockchain world to create a decentralized global identity",
   };
 
   return (

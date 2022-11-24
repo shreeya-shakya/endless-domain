@@ -9,7 +9,7 @@ const Layout = ({ metaInfo, children }: LayoutType) => {
         <Head>
           <title>{metaInfo.title}</title>
           <meta name="description" content={metaInfo.description} />
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/favicon.png" />
         </Head>
         <>
         <Header />
